@@ -1,0 +1,56 @@
+<%- include('layout/header') %>
+
+<div class="container">
+
+    <div class="note">
+        <p>This web application was created to fulfill 
+            Web Technology module’s requirements and does not represent an actual company or service</p>
+    </div>
+
+
+    <% if (message) { %>
+        <div role="alert">
+            <strong><%= message.message %></strong>
+        </div>
+    <% } %>
+
+    <div class="table-responsive">
+        <% if (users.length > 0) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Edit and Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach((row, index) => { %>
+                        <tr>
+                            <td><%= index %></td>
+                            <td><img src="<%= row.image %>" width="50"></td>
+                            <td><%= row.name %></td>
+                            <td><%= row.email %></td>
+                            <td><%= row.phone %></td>
+                            <td>
+                                <a href="/edit/<%= row._id %>" class="action_icon edit_icon" title="Edit">
+                                    <img src="/images/edit.png" alt="Edit">
+                                </a>
+                                <a href="/delete/<%= row._id %>" class="action_icon delete_icon" title="Delete">
+                                    <img src="/images/bin.png" alt="Delete">
+                                </a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <h1>There is no users found in the database</h1>
+        <% } %>
+    </div>
+</div>
+
+<%- include('layout/footer') %>

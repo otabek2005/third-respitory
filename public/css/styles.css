@@ -1,0 +1,253 @@
+/* Codes for all pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: hsl(211, 100%, 39%);
+    color: white;
+    padding: 10px 0;
+}
+
+nav div {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 4px 6px;
+    display: inline-block;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 4px;
+}
+
+/* Menu list */
+nav div ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav div ul li {
+    margin-left: 20px;
+}
+
+/* Table and Alert */
+div[role="alert"] {
+    background-color: #00a42c;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Image in Table */
+td img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    h1 {font-size: 20px;
+    }
+}
+
+/* Form Styling for Add/Edit User Pages */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Image in Edit page */
+img {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Input */
+input[type="file"] {
+    border: none;
+}
+
+/* Container for Add and Edit pages */
+.container_editusers {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"],
+    input[type="submit"] {
+        font-size: 1rem;
+    }
+}
+
+
+/* Icons codes */
+.action_icon {
+    text-decoration: none;  
+    margin-right: 15px;     
+    display: inline-block;  
+    vertical-align: middle; 
+}
+
+
+.edit_icon img {
+    width: 30px;           
+    height: 30px;          
+    object-fit: contain;   
+    border-radius: 0%;     
+}
+
+
+.edit_icon:hover img {
+    opacity: 30%;
+    
+}
+
+
+.delete_icon img {
+    width: 30px;
+    height:30px;
+    font-size: 18px;   
+    color: #dc3545;      
+    border-radius: 0%;
+}
+
+
+.delete_icon:hover img {
+    opacity: 30%; 
+}
+
+
+.note {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+
+.note p {
+    font-style: italic;
+    font-size: 18px;
+    color: #ff2626;
+    
+}
+

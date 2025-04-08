@@ -1,0 +1,35 @@
+<%- include('layout/header') %>
+
+<div class="container_editusers">
+    <form action="/update/<%= user._id %>" method="post" id="edit-form" enctype="multipart/form-data">
+        <div>
+            <label for="name">Full Name</label>
+            <input type="text" name="name" placeholder="Enter Full Name" value="<%=user.name%>" required/>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter Email" value="<%=user.email%>" required/>
+        </div>
+
+        
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" placeholder="Enter Phone Number" value="<%=user.phone%>" required/>
+        </div>
+
+        
+        <div>
+            <label for="image">Select Image</label>
+            <input type="file" name="image"/>
+            <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1"/>
+        </div>
+        <input type="hidden" name="old_image" value="<%= user.image %>"/>
+
+        <div>
+            <input type="submit" name="submit" value="Update User" />
+        </div>
+    </form>
+</div>
+
+<%- include('layout/footer') %>
